@@ -1,2 +1,4 @@
 #ignore .scss files
 css/*.scss
+css/header.css
+css/main.css
