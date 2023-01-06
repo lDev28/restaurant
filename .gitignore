@@ -1,4 +1,6 @@
 #ignore .scss files
 css/*.scss
 css/header.css
-css/main.css
+css/gallery.css
+css/history.css
+prepros.config
