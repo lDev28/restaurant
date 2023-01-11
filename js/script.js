@@ -50,3 +50,48 @@ burgerMenu.addEventListener('click', () => {
 
 // const wrapperBlock = d.querySelector('.wrapper').clientWidth
 // console.log(wrapperBlock);
+
+
+
+// SLIDER
+const container = d.querySelector('.container')
+const containerWidth = container.clientWidth
+const menuSliderTrack = d.querySelector('.menu-slider__track')
+
+const menuSliderItem = d.querySelectorAll('.menu-slider__item')
+
+const countItem = 8
+const countShowItem = 3
+const itemToScroll = 2
+let position = 0
+
+const menuSliderNextBtn = d.getElementById('menuSliderNextBtn')
+const menuSliderPrevBtn = d.getElementById('menuSliderPrevBtn')
+
+const menuSliderItemWidth = containerWidth / countShowItem
+const scrollCount = menuSliderItemWidth * itemToScroll
+
+for (const item of menuSliderItem) {
+	const menuTrackWidth = countItem * item.clientWidth + 'px'
+	item.style.flexBasis = menuSliderItemWidth + 'px'
+}
+menuSliderTrack.style.width = containerWidth + 'px'
+
+menuSliderNextBtn.addEventListener('click', () => {
+	position += scrollCount
+	console.log(position);
+
+	if (position == 0) {
+		menuSliderNextBtn.removeEventListener
+	}
+
+	menuSliderTrack.style.transform = `translateX(-${position}px)`
+})
+
+
+menuSliderPrevBtn.addEventListener('click', () => {
+	position -= scrollCount
+	console.log(position);
+
+	menuSliderTrack.style.transform = `translateX(-${position}px)`
+})
