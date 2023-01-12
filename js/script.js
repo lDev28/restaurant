@@ -1,5 +1,8 @@
 const d = document
 
+const wrapperBlock = d.querySelector('.wrapper')
+
+
 const introTitle = d.querySelectorAll('.intro__title')
 
 for (let i = 0; i < introTitle.length; i++) {
@@ -48,9 +51,21 @@ burgerMenu.addEventListener('click', () => {
 	// d.querySelector('.wrapper').classList.toggle('active')
 })
 
-// const wrapperBlock = d.querySelector('.wrapper').clientWidth
 // console.log(wrapperBlock);
 
+
+
+// LOADER
+const images = d.querySelectorAll('img')
+
+for (const image of images) {
+	image.addEventListener('load', loaded)
+}
+
+function loaded() {
+	const loader = d.querySelector('.loader')
+	loader.style.display = 'none'
+}
 
 
 // SLIDER
