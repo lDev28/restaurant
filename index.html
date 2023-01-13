@@ -17,11 +17,16 @@
 <body>
 	<div class="wrapper">
 
-		<div class="loader">
+		<!-- <div class="loader">
 			<img src="img/loader.gif" alt="">
-		</div>
+		</div> -->
+
+		<button id="btnTop">
+			<div></div>
+		</button>
 
 		<header class="header">
+			<div class="scroll-nav"></div>
 			<div class="container">
 				<div class="header__body">
 					<div class="header__logo">
@@ -32,10 +37,12 @@
 					</div>
 
 					<ul class="header__menu">
-						<li><a href="#" class="header__link">Home</a></li>
-						<li><a href="#" class="header__link">Menu</a></li>
-						<li><a href="#" class="header__link">About</a></li>
-						<li><a href="#" class="header__link">Order</a></li>
+						<div class="header__links">
+							<li><a href="#" class="header__link">Home</a></li>
+							<li><a id="menuLink" href="#" class="header__link">Menu</a></li>
+							<li><a href="#" class="header__link">About</a></li>
+							<li><a href="#" class="header__link">Order</a></li>
+						</div>
 
 						<div class="header__contact header-contact">
 							<img src="img/icons/cart.png" class="header-contact__cart">
@@ -140,19 +147,154 @@
 			</div>
 		</section>
 
+		<section class="menu">
+			<div class="container">
+				<h1 class="menu__title title">Наши Блюда</h1>
+				<div class="menu__row">
+					<img src="img/menu-banner.jpg">
+					<div class="menu__column">
+						<div class="menu__item menu-item">
+							<img src="img/menu-content.jpg">
+							<div class="menu-item__content">
+								<p class="menu-item__name">Гамбургер мини</p>
+								<div class="menu-item__line"></div>
+								<p class="menu-item__price">220 ₽</p>
+							</div>
+						</div>
+						<div class="menu__item menu-item">
+							<img src="img/menu-content.jpg">
+							<div class="menu-item__content">
+								<p class="menu-item__name">Гамбургер мини</p>
+								<div class="menu-item__line"></div>
+								<p class="menu-item__price">220 ₽</p>
+							</div>
+						</div>
+						<div class="menu__item menu-item">
+							<img src="img/menu-content.jpg">
+							<div class="menu-item__content">
+								<p class="menu-item__name">Гамбургер мини</p>
+								<div class="menu-item__line"></div>
+								<p class="menu-item__price">220 ₽</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- <img src="img/menu-bg.jpg" class="gallery__background"> -->
+
 		<section class="menu-slider">
 			<div class="conatiner">
-				<div class="menu-slider__window">
+				<div class="menu-slider__window" id="menuSlider">
 					<div class="menu-slider__track">
-						<div class="menu-slider__item">1</div>
-						<div class="menu-slider__item">2</div>
-						<div class="menu-slider__item">3</div>
-						<div class="menu-slider__item">4</div>
-						<div class="menu-slider__item">5</div>
-						<div class="menu-slider__item">6</div>
-						<div class="menu-slider__item">7</div>
-						<div class="menu-slider__item">8</div>
+						<div class="menu-slider__item slider-item">
+							<div class="slider-item__body">
+								<div class="slider-item__gallery">
+									<img src="img/slider-gallery.jpg">
+									<p class="slider-item__price">420</p>
+								</div>
+								<h2 class="slider-item__title">Гамбургер макси</h2>
+								<p class="slider-item__subtitle">Максимально толстый
+									слой мяса</p>
+								<button class="button">ЗАКАЗАТЬ</button>
+							</div>
+						</div>
+						<div class="menu-slider__item slider-item">
+							<div class="slider-item__body">
+								<div class="slider-item__gallery">
+									<img src="img/slider-gallery.jpg">
+									<p class="slider-item__price">420</p>
+								</div>
+								<h2 class="slider-item__title">Гамбургер макси</h2>
+								<p class="slider-item__subtitle">Максимально толстый
+									слой мяса</p>
+								<button class="button">ЗАКАЗАТЬ</button>
+							</div>
+						</div>
+						<div class="menu-slider__item slider-item">
+							<div class="slider-item__body">
+								<div class="slider-item__gallery">
+									<img src="img/slider-gallery.jpg">
+									<p class="slider-item__price">420</p>
+								</div>
+								<h2 class="slider-item__title">Гамбургер макси</h2>
+								<p class="slider-item__subtitle">Максимально толстый
+									слой мяса</p>
+								<button class="button">ЗАКАЗАТЬ</button>
+							</div>
+						</div>
+						<div class="menu-slider__item slider-item">
+							<div class="slider-item__body">
+								<div class="slider-item__gallery">
+									<img src="img/slider-gallery.jpg">
+									<p class="slider-item__price">420</p>
+								</div>
+								<h2 class="slider-item__title">Гамбургер макси</h2>
+								<p class="slider-item__subtitle">Максимально толстый
+									слой мяса</p>
+								<button class="button">ЗАКАЗАТЬ</button>
+							</div>
+						</div>
+						<div class="menu-slider__item slider-item">
+							<div class="slider-item__body">
+								<div class="slider-item__gallery">
+									<img src="img/slider-gallery.jpg">
+									<p class="slider-item__price">420</p>
+								</div>
+								<h2 class="slider-item__title">Гамбургер макси</h2>
+								<p class="slider-item__subtitle">Максимально толстый
+									слой мяса</p>
+								<button class="button">ЗАКАЗАТЬ</button>
+							</div>
+						</div>
+						<div class="menu-slider__item slider-item">
+							<div class="slider-item__body">
+								<div class="slider-item__gallery">
+									<img src="img/slider-gallery.jpg">
+									<p class="slider-item__price">420</p>
+								</div>
+								<h2 class="slider-item__title">Гамбургер макси</h2>
+								<p class="slider-item__subtitle">Максимально толстый
+									слой мяса</p>
+								<button class="button">ЗАКАЗАТЬ</button>
+							</div>
+						</div>
+						<div class="menu-slider__item slider-item">
+							<div class="slider-item__body">
+								<div class="slider-item__gallery">
+									<img src="img/slider-gallery.jpg">
+									<p class="slider-item__price">420</p>
+								</div>
+								<h2 class="slider-item__title">Гамбургер макси</h2>
+								<p class="slider-item__subtitle">Максимально толстый
+									слой мяса</p>
+								<button class="button">ЗАКАЗАТЬ</button>
+							</div>
+						</div>
+						<div class="menu-slider__item slider-item">
+							<div class="slider-item__body">
+								<div class="slider-item__gallery">
+									<img src="img/slider-gallery.jpg">
+									<p class="slider-item__price">420</p>
+								</div>
+								<h2 class="slider-item__title">Гамбургер макси</h2>
+								<p class="slider-item__subtitle">Максимально толстый
+									слой мяса</p>
+								<button class="button">ЗАКАЗАТЬ</button>
+							</div>
+						</div>
 					</div>
+				</div>
+				<div class="menu-slider__viewSlider">
+					<div class="menu-slider__viewSlide"></div>
+					<div class="menu-slider__viewSlide"></div>
+					<div class="menu-slider__viewSlide"></div>
+					<div class="menu-slider__viewSlide"></div>
+					<div class="menu-slider__viewSlide"></div>
+					<div class="menu-slider__viewSlide"></div>
+					<div class="menu-slider__viewSlide"></div>
+					<div class="menu-slider__viewSlide"></div>
 				</div>
 				<div class="menu-slider__btns">
 					<button id="menuSliderPrevBtn">prev</button>
@@ -160,28 +302,33 @@
 				</div>
 			</div>
 		</section>
-
+		<!-- .bottom-sections -->
 		<section class="gallery">
 			<div class="container">
 				<div class="gallery__body">
 					<h1 class="gallery__title title">Галерея Блюд</h1>
-					<div class="gallery__row">
-						<div class="gallery__column">
-							<img src="img/gallery1.jpg">
-							<div class="gallery__row">
-								<img src="img/gallery2.jpg">
-								<img src="img/gallery3.jpg">
-							</div>
+					<div class="gallery__images">
+						<div class="gallery__item1">
+							<img class="gallery__item" src="img/gallery1.jpg">
 						</div>
-						<div class="gallery__column gallery__column_reverse">
-							<img src="img/gallery1.jpg">
-							<div class="gallery__row">
-								<img src="img/gallery2.jpg">
-								<img src="img/gallery3.jpg">
-							</div>
+						<div class="gallery__item2">
+							<img class="gallery__item" src="img/gallery2.jpg">
+						</div>
+						<div class="gallery__item2">
+							<img class="gallery__item" src="img/gallery3.jpg">
+						</div>
+						<div class="gallery__item2">
+							<img class="gallery__item" src="img/gallery2.jpg">
+						</div>
+						<div class="gallery__item2">
+							<img class="gallery__item" src="img/gallery3.jpg">
+						</div>
+						<div class="gallery__item3">
+							<img class="gallery__item" src="img/gallery1.jpg">
 						</div>
 					</div>
 				</div>
+			</div>
 		</section>
 
 		<section class="gallery-cook">
@@ -199,7 +346,11 @@
 
 		<img src="img/last-img.jpg" class="last-img">
 
-		<a href="https://www.figma.com/file/dVBa7wx6E0y2wiSODQdhut/Untitled?node-id=2%3A2&t=xqa1ZQIH6Ad6F6ig-0">figma
+		<footer class="footer">
+			created by <span class="footer__name">Arslan Garayev</span> for Restaurant
+		</footer>
+		<a style="display: none;"
+			href="https://www.figma.com/file/dVBa7wx6E0y2wiSODQdhut/Untitled?node-id=2%3A2&t=xqa1ZQIH6Ad6F6ig-0">figma
 			template</a>
 	</div>
 	<script src="js/script.js"></script>
