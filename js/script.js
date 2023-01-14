@@ -73,13 +73,15 @@ function setBurgerFunc() {
 
 const btnTop = d.getElementById('btnTop')
 
-btnTop.addEventListener('click', () => {
+btnTop.addEventListener('click', setScrollToTopBtn)
+
+function setScrollToTopBtn() {
 
 	wrapperBlock.scrollTo({
 		top: 0,
 		behavior: "smooth"
 	})
-})
+}
 
 
 wrapperBlock.addEventListener('scroll', () => {
@@ -109,25 +111,85 @@ wrapperBlock.addEventListener('scroll', () => {
 })
 
 
+// LINKS
+
+const homeLink = d.querySelector('#homeLink')
 const menuLink = d.querySelector('#menuLink')
+const aboutLink = d.querySelector('#aboutLink')
+const orderLink = d.querySelector('#orderLink')
+
+
+const headerSection = d.querySelector('.header')
+const mainSection = d.querySelector('.main')
+const introSection = d.querySelector('.intro')
+const historySection = d.querySelector('.history')
+const orderSection = d.querySelector('.history-banner')
+
+const menuTitle = d.querySelector('.menu__title')
+const menuBtn = d.querySelector('#menuBtn')
+const headerOrderBtn = d.querySelector('#headerOrderBtn')
+
+homeLink.addEventListener('click', setScrollToTop)
+aboutLink.addEventListener('click', setScrollToAbout)
+orderLink.addEventListener('click', setScrollToOrder)
+headerOrderBtn.addEventListener('click', setScrollToOrder)
+menuBtn.addEventListener('click', setScrollToMenuBtn)
+
+function setScrollToAbout() {
+	const scrollTillAboutSection = mainSection.scrollHeight - headerSection.clientHeight * 2
+
+	wrapperBlock.scrollTo({
+		top: scrollTillAboutSection,
+		behavior: 'smooth'
+	})
+
+	setBurgerFunc()
+}
+
+function setScrollToOrder() {
+	const toScrollToCenter = (wrapperBlock.clientHeight - orderSection.scrollHeight) / 2
+
+	const scrollTillOrderSection = mainSection.scrollHeight + introSection.scrollHeight + historySection.scrollHeight - toScrollToCenter
+
+	wrapperBlock.scrollTo({
+		top: scrollTillOrderSection,
+		behavior: 'smooth'
+	})
+
+	setBurgerFunc()
+}
+
+function setScrollToMenuBtn() {
+
+	setScrollToMenuLink()
+}
+
+function setScrollToTop() {
+
+	wrapperBlock.scrollTo({
+		top: 0,
+		behavior: "smooth"
+	})
+	setBurgerFunc()
+}
+
 const menuSection = d.querySelector('.menu')
 menuLink.addEventListener('click', () => {
-	setScroll()
+	setScrollToMenuLink()
 	setBurgerFunc()
 })
 
-function setScroll() {
-	const topOffset = d.querySelector('.menu').offsetHeight * 1.6;
-	const elementPosition = menuLink.getBoundingClientRect().top;
-	const offsetPosition = elementPosition - topOffset;
-	const scrollCoordinate = offsetPosition + (offsetPosition * -1) * 2
-	wrapperBlock.scrollBy({
-		top: scrollCoordinate,
+function setScrollToMenuLink() {
+
+	const scrollTillMenuSection = mainSection.scrollHeight + introSection.scrollHeight + historySection.scrollHeight + orderSection.scrollHeight + menuTitle.scrollHeight
+
+	wrapperBlock.scrollTo({
+		top: scrollTillMenuSection,
 		behavior: 'smooth'
-	});
+	})
+
 }
 
-// console.log(wrapperHigth);
 
 
 // LOADER
