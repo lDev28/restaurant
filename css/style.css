@@ -3,6 +3,18 @@
 2.Main
 3.Sections
 */
+@font-face {
+  font-family: "Cookie";
+  src: url(../fonts/Cookie-Regular.ttf);
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url(../fonts/OpenSans-Regular.ttf);
+}
+@font-face {
+  font-family: "Tinos";
+  src: url(../fonts/Tinos-Regular.ttf);
+}
 * {
   margin: 0;
   padding: 0;
