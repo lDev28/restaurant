@@ -345,7 +345,7 @@ body {
 .main {
   width: 100%;
   min-height: 100%;
-  background-image: url(../img/main-banner.jpg);
+  background-image: url(../img/main-banner.webp);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: left;
@@ -560,7 +560,7 @@ body {
 .history-banner {
   max-width: 100%;
   position: relative;
-  background-image: url(../img/history-banner.jpg);
+  background-image: url(../img/history-banner.webp);
   background-position: center;
   background-size: cover;
 }
@@ -618,6 +618,7 @@ body {
     width: 100%;
     margin: 50px auto;
   }
+
   .history-banner__row {
     flex-flow: column;
     text-align: center;
@@ -739,6 +740,7 @@ body {
   .menu__column {
     margin: 20px 0;
   }
+
   .menu-item {
     margin-left: 0;
   }
@@ -869,7 +871,7 @@ body {
 .menu-slider {
   width: 100%;
   margin: 0 0 100px;
-  background-image: url(../img/menu-bg.jpg);
+  background-image: url(../img/menu-bg.webp);
   background-position: center;
   background-size: cover;
 }
